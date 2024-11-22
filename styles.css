@@ -1,0 +1,147 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #89030a;
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  margin-bottom: 20px;
+  width: 100%; /* Ensure the header spans the full width */
+}
+
+.banner {
+  width: 100%; /* Stretch the banner image to cover the full width */
+  height: auto;
+  display: block; /* Removes extra space below the image */
+}
+
+/* Controls (timer and back button) */
+#controls {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#timer {
+  font-size: 18px;
+  display: none; /* Hide timer initially */
+}
+
+#back {
+  padding: 8px 16px;
+  background-color: #1e7e34; /* New background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+#back:hover {
+  background-color: #145a24; /* Darker shade on hover */
+}
+
+/* Player input section */
+#player-input {
+  margin-bottom: 20px;
+}
+
+#player-name {
+  padding: 8px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+}
+
+#start-game {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#start-game:hover {
+  background-color: #1e7e34;
+}
+
+/* Game board (card grid) */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(6, 100px); /* Set the grid to fit 6 cards */
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  display: none; /* Hide game board initially */
+}
+
+/* Individual card styles */
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  background-image: url('images/ElGordo_Logo_124px.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* Styling when card is flipped */
+.card.flipped {
+  background-image: url('images/ElGordo_Logo_opa.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Styling for matched cards */
+.card.matched {
+  background-color: #28a745;
+  pointer-events: none;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* Emoji styling (when the card is flipped) */
+.card.flipped .emoji {
+  display: block;
+}
+
+.emoji {
+  font-size: 48px;
+  color: black;
+  display: none;
+}
+
+/* Leaderboard section */
+#leaderboard {
+  margin-top: 30px;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding: 0;
+}
+
+#leaderboard-list li {
+  margin: 5px 0;
+  font-size: 16px;
+}
